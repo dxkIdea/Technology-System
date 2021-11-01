@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: auth-service
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      #配置中心
+      config:
+        #命名空间
+        namespace: aff4dfb7-d9f0-4c5f-893b-13c323f8181d
+        #对应nacos中的Data_Id
+        name: auth-service
+        #Nacos用户名、密码
+        username: nacos
+        password: nacos
+        #配置文件格式
+        file-extension: yaml
+        #所属组，默认DEFAULT_GROUP
+        group: DEFAULT_GROUP
+        refresh-enabled: true
+      #服务发现
+      discovery:
+        group: DEFAULT_GROUP
+        ip: localhost
+        port: 8848
+        namespace: aff4dfb7-d9f0-4c5f-893b-13c323f8181d
