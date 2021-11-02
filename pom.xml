@@ -16,6 +16,7 @@
         <module>technology-gateway</module>
         <module>technology-auth</module>
         <module>technology-admin-monitor</module>
+        <module>Technology-MybatisGenerator</module>
     </modules>
 
     <parent>
@@ -85,6 +86,7 @@
         <pagehelper.version>5.2.0</pagehelper.version>
         <nimbus-jose-jwt.version>8.16</nimbus-jose-jwt.version>
         <admin-starter-server.version>2.2.3</admin-starter-server.version>
+        <mybatis-generator.version>1.4.0</mybatis-generator.version>
     </properties>
 
     <dependencies>
@@ -246,6 +248,12 @@
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-server</artifactId>
                 <version>${admin-starter-server.version}</version>
+            </dependency>
+            <!-- MyBatis 生成器 -->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis-generator.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

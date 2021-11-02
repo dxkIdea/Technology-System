@@ -1,0 +1,21 @@
+CREATE TABLE `auth_user` (
+                             `user_id` int NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+                             `user_name` varchar(32) COLLATE utf8mb4_general_ci NOT NULL COMMENT '用户名',
+                             `nick_name` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '昵称',
+                             `password` varchar(32) COLLATE utf8mb4_general_ci NOT NULL COMMENT '密码',
+                             `phone_number` int NOT NULL COMMENT '手机号',
+                             `age` int DEFAULT NULL COMMENT '年龄',
+                             `gender` int NOT NULL COMMENT '性别 1：女 2：男',
+                             `status` int NOT NULL DEFAULT '1' COMMENT '用户状态 1：有效 2：失效',
+                             `icon` varchar(1024) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '头像 头像',
+                             `birthday` date DEFAULT NULL COMMENT '生日',
+                             `city` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '所在城市',
+                             `job` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '职业',
+                             `revision` int DEFAULT NULL COMMENT '乐观锁',
+                             `created_by` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '创建人',
+                             `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+                             `updated_by` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '更新人',
+                             `updated_time` datetime DEFAULT NULL COMMENT '更新时间',
+                             PRIMARY KEY (`user_id`),
+                             UNIQUE KEY `USER_NAME_INDEX` (`user_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT=' 用户表';
