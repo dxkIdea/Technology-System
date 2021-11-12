@@ -1,10 +1,13 @@
-package com.dxk.technology.mybatis.generator.mapper;
+package com.dxk.technology.member.dao;
 
-import com.dxk.technology.mybatis.generator.model.AuthUser;
-import com.dxk.technology.mybatis.generator.model.AuthUserExample;
-import java.util.List;
+import com.dxk.technology.member.model.AuthUser;
+import com.dxk.technology.member.model.AuthUserExample;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+@Mapper
 public interface AuthUserMapper {
     long countByExample(AuthUserExample example);
 

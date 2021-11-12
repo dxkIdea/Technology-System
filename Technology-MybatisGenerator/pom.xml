@@ -6,6 +6,7 @@
         <artifactId>Technology-System</artifactId>
         <groupId>com.dxk.technology</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -34,7 +35,6 @@
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
-            <version>${HikariCP.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

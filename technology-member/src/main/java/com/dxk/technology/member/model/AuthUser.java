@@ -1,6 +1,7 @@
-package com.dxk.technology.mybatis.generator.model;
+package com.dxk.technology.member.model;
 
 import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 import java.util.Date;
 

@@ -1,8 +1,8 @@
 package com.dxk.technology.member;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -14,7 +14,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Description: 会员服务启动类
  */
 @EnableDiscoveryClient
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@MapperScan(basePackages = {"com.dxk.technology.member.dao"})
+@SpringBootApplication
 public class MemberApplication {
     public static void main(String[] args) {
         SpringApplication.run(MemberApplication.class,args);
