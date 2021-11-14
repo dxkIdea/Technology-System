@@ -11,7 +11,7 @@
 
     <artifactId>technology-admin-monitor</artifactId>
     <packaging>jar</packaging>
-    <description>微服务监控服务模块</description>
+    <description>微服务监控服务模块1</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
